@@ -8,10 +8,18 @@
 	</head>
   
 	<body>
-		<div class="collapse" id="database">
-			
+		<div class="collapse" id="database-layout">
+			<div class="add-button"><button id="new-data">Add a Character</button></div>
+			<div class="row">
+				<div class="col">Name</div>
+				<div class="col">Class</div>
+				<div class="col">Race</div>
+				<div class="col">Stats</div>
+				<div class="col">Portrait</div>
+				<div class="col">Edit</div>
+			</div>
 		</div>
-		<div class="collapse" id="add-data">
+		<div class="collapse" id="character-form">
 			<form name="new-data" id="new-data">
 				<div class="form-el">
 					<p>Name:</p><input type="text" id="data-name"></div>
@@ -64,6 +72,9 @@
 				<div class="form-el">
 					<p>Portrait</p><input type="file" name="data-file" id="data-file">
 				</div>
+				
+				<button id="submit-data">Submit</button>
+				<button id="cancel-data">Cancel</button>
 			</form>
 		</div>
 		
