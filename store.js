@@ -3,14 +3,21 @@
 // store.js - script for storing and editing JSON in a local array
 
 //-----------------------------------------------------------------------------//
+//blank array for storing JSON objects
+
+var chArr= [];
+
+//-----------------------------------------------------------------------------//
 //These watch for button clicks to change the form
 
 $('#add-data').on('click', getData);
 
+for(var i=0; i<chArr.length; ++i){
+$('#delete-data').on('click', deleteData);
+}
 
 //-----------------------------------------------------------------------------//
-
-var chArr= [];
+//function gets new data and pushes to the array
 
 function getData(){
 	var chName = $('#data-name').val();
@@ -39,9 +46,12 @@ function getData(){
 	event.preventDefault();
 }
 
+//-----------------------------------------------------------------------------//
+//This function generates a the table each time an JSON object is added, edited, or removed
+
 function generateTable (chStats){
   var chart = $('#database-layout');
-	var row = $('<div>').addClass('row data');
+	var row = $('<div>').addClass('row data ' + chArr.indexOf(chStats));
 	
 	var col = $('<div>').addClass('col').text(chStats.name);
 	row.append(col);
@@ -49,13 +59,20 @@ function generateTable (chStats){
 	row.append(col);
 	col = $('<div>').addClass('col').text(chStats.class);
 	row.append(col);
-	col = $('<div>').addClass('col').html('<p>Str:'+chStats.str+'</p>'+'<p>Dex:'+chStats.dex+'</p>'+'<p>Con:'+chStats.con+'</p>'+'<p>Int:'+chStats.int+'</p>'+'<p>Wis:'+chStats.wis+'</p>'+'<p>Cha:'+chStats.cha+'</p>');
+	col = $('<div>').addClass('col').html('<div class="statnumbers"><p>Str:'+chStats.str+'</p>'+'<p>Dex:'+chStats.dex+'</p>'+'<p>Con:'+chStats.con+'</p></div>'+'<div class="statnumbers"><p>Int:'+chStats.int+'</p>'+'<p>Wis:'+chStats.wis+'</p>'+'<p>Cha:'+chStats.cha+'</p></div>');
 	row.append(col);
 	col = $('<div>').addClass('col').text(chStats.portrait);
 	row.append(col);
-	col=$('<div>').addClass('col').html('<button id="edit-data">Edit</button><button id="delete-data">delete</button>');
+	col=$('<div>').addClass('col').html('<button id="edit-data' + chArr.indexOf(chStats) +'">Edit</button><button id="delete-data'+chArr.indexOf(chStats)+'">delete</button>');
 	row.append(col);
 
 	chart.append(row);
 	event.preventDefault();
+}
+
+//-----------------------------------------------------------------------------//
+//This function deletes the JSON and div row
+
+function deleteData() {
+	console.log("this button is working");
 }

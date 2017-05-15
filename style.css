@@ -17,3 +17,26 @@ div.row:after {
   display: block;
   clear: both;
 }
+
+div.col {
+	float: left;
+}
+
+.col {
+	width: 15%;
+	border: .1em solid #000000;
+}
+
+.col:nth-child(4) {
+	width: 6em;
+}
+
+.data .col {
+  min-height: 4em;
+}
+
+.data .col:nth-child(4) {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+}
