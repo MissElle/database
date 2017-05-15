@@ -26,29 +26,32 @@
 				<div class="form-el">
 					<p>Race:</p>
 					<select name="select-race" id="select-race">
-						<option name="data-race" id="race-barb" selected>Barbarian</option>
-						<option name="data-race" id="race-bard">Bard</option>
-						<option name="data-race" id="race-drui">Druid</option>
-						<option name="data-race" id="race-monk">Monk</option>
-						<option name="data-race" id="race-pala">Paladin</option>
-						<option name="data-race" id="race-rang">Ranger</option>
-						<option name="data-race" id="race-sorc">Sorcerer</option>
-						<option name="data-race" id="race-warl">Warlock</option>
+						<option name="data-race" id="race-default"disabled selected>Pick a Race</option>
+						<option name="data-race" id="race-drag">Dragon</option>
+						<option name="data-race" id="race-dwar">Dwarf</option>
+						<option name="data-race" id="race-elad">Eladrin</option>
+						<option name="data-race" id="race-elf">Elf</option>
+						<option name="data-race" id="race-gnom">Gnome</option>
+						<option name="data-race" id="race-helf">Half-elf</option>
+						<option name="data-race" id="race-horc">Half-orc</option>
+						<option name="data-race" id="race-half">Halfling</option>
+						<option name="data-race" id="race-huma">Human</option>
+						<option name="data-race" id="race-tief">Tiefling</option>
 					</select>
 				</div>
+
 				<div class="form-el">
 					<p>Class:</p>
 					<select name="select-class" id="select-class">
-						<option name="data-class" id="class-drag" selected>Dragon</option>
-						<option name="data-class" id="class-dwar">Dwarf</option>
-						<option name="data-class" id="class-elad">Eladrin</option>
-						<option name="data-class" id="class-elf">Elf</option>
-						<option name="data-class" id="class-gnom">Gnome</option>
-						<option name="data-class" id="class-helf">Half-elf</option>
-						<option name="data-class" id="class-horc">Half-orc</option>
-						<option name="data-class" id="class-half">Halfling</option>
-						<option name="data-class" id="class-huma">Human</option>
-						<option name="data-class" id="class-tief">Tiefling</option>
+						<option name="data-class" id="class-default"disabled selected>Pick a Class</option>
+						<option name="data-class" id="class-barb">Barbarian</option>
+						<option name="data-class" id="class-bard">Bard</option>
+						<option name="data-class" id="class-drui">Druid</option>
+						<option name="data-class" id="class-monk">Monk</option>
+						<option name="data-class" id="class-pala">Paladin</option>
+						<option name="data-class" id="class-rang">Ranger</option>
+						<option name="data-class" id="race-class">Sorcerer</option>
+						<option name="data-class" id="class-warl">Warlock</option>
 					</select>
 				</div>
 				<div class="form-el">
@@ -73,7 +76,7 @@
 					<p>Portrait</p><input type="file" name="data-file" id="data-file">
 				</div>
 				
-				<button id="submit-data">Submit</button>
+				<button id="add-data">Submit</button>
 				<button id="cancel-data">Cancel</button>
 			</form>
 		</div>
