@@ -3,8 +3,60 @@
 /* style.css - mock database assignment */
 
 /*--------------------------------------------------------------------------------*/
+/*basic stylings for fonts and backgrounds, etc.
+
+/* FONTS from GOOGLE
+font-family: 'Skranji', cursive;
+font-family: 'Almendra SC', serif;
+*/
 
 * {box-sizing: border-box; margin: 0; padding: 0;}
+
+html {
+	background-image: url(parchment.jpeg); /*image courtesy of http://www.powerpointhintergrund.com/*/
+	background-size: 100%;
+	background-repeat: repeat-y;
+	font-family: 'Almendra SC', serif;
+}
+
+button, label{font-family: 'Skranji', cursive; font-size: 1em;}
+select, option, input {font-family: 'Almendra SC', serif;}
+
+.first{
+	font-family: 'Skranji', cursive;
+	font-size: 1.3em;
+}
+
+h1, h2 {font-family: 'Skranji', cursive;}
+
+.hide{display: none;}
+
+/*--------------------------------------------------------------------------------*/
+/*This area creates a label for the file upload and synchronizes it with the button events*/
+
+input[type=file] {width: 0em; opacity: 0;}
+
+input[type=file] + label, button{
+	padding: .1em;
+	border-radius: .3em;
+	background: linear-gradient(#eaf6ff, #bacddb);
+	border-style: solid;
+	border-width: .1em;
+	border-color: #ffffff #ffffff #738ea3 #738ea3;
+}
+
+input[type=file] + label{padding: .3em;}
+
+input[type=file] + label:hover, button:hover{
+	cursor: pointer;
+}
+
+input[type=file] + label:active, button:active{
+	border-color:#738ea3 #738ea3 #cde2f2 #cde2f2;
+}
+
+/*--------------------------------------------------------------------------------*/
+/*Grid stylings*/
 
 div.row {
   width: 100%;
@@ -39,4 +91,22 @@ div.col {
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: space-around;
+}
+
+.form-el {
+	width: 100%;
+	max-width: 16em;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+}
+
+input, select {
+	width: 11em;
+	font-size: 1em;
+}
+
+input[type=number]{
+	width: 4em;
+	margin: 0 5em 0 0;
 }

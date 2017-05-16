@@ -4,13 +4,14 @@
   	<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" type="text/css" href="style.css">
-  	<title></title>
+		<link href="https://fonts.googleapis.com/css?family=Almendra+SC|Skranji" rel="stylesheet">
+  	<title>Character Sheet</title>
 	</head>
   
 	<body>
-		<div class="collapse" id="database-layout">
-			<div class="add-button"><button id="new-data">Add a Character</button></div>
-			<div class="row">
+		<h1>Dungeons&amp;Dragons</h1>
+		<h2>Character Sheet</h2>
+			<div class="row first">
 				<div class="col">Name</div>
 				<div class="col">Class</div>
 				<div class="col">Race</div>
@@ -18,6 +19,8 @@
 				<div class="col">Portrait</div>
 				<div class="col">Edit</div>
 			</div>
+			<div class="collapse" id="database-layout">
+			<div class="add-button"><button id="new-data">Add a Character</button></div>
 		</div>
 		<div class="collapse" id="character-form">
 			<form name="new-data" id="new-data">
@@ -26,7 +29,7 @@
 				<div class="form-el">
 					<p>Race:</p>
 					<select name="select-race" id="select-race">
-						<option name="data-race" id="race-default"disabled selected>Pick a Race</option>
+						<option name="data-race" id="race-default" class="hide" disabled selected>Pick a Race</option>
 						<option name="data-race" id="race-drag">Dragon</option>
 						<option name="data-race" id="race-dwar">Dwarf</option>
 						<option name="data-race" id="race-elad">Eladrin</option>
@@ -43,7 +46,7 @@
 				<div class="form-el">
 					<p>Class:</p>
 					<select name="select-class" id="select-class">
-						<option name="data-class" id="class-default"disabled selected>Pick a Class</option>
+						<option name="data-class" id="class-default" class="hide" disabled selected>Pick a Class</option>
 						<option name="data-class" id="class-barb">Barbarian</option>
 						<option name="data-class" id="class-bard">Bard</option>
 						<option name="data-class" id="class-drui">Druid</option>
@@ -53,6 +56,10 @@
 						<option name="data-class" id="race-class">Sorcerer</option>
 						<option name="data-class" id="class-warl">Warlock</option>
 					</select>
+				</div>
+				<div class="form-el">
+					<p>Portrait</p><input type="file" name="data-file" id="data-file">
+					<label for="data-file">Upload a Portrait</label>
 				</div>
 				<div class="form-el">
 					<p>Strength:</p><input type="number" name="data-str" id="data-str" step="1" min="1">
@@ -72,10 +79,6 @@
 				<div class="form-el">
 					<p>Charisma:</p><input type="number" name="data-cha" id="data-cha" step="1" min="1">
 				</div>
-				<div class="form-el">
-					<p>Portrait</p><input type="file" name="data-file" id="data-file">
-				</div>
-				
 				<button id="add-data">Submit</button>
 				<button id="cancel-data">Cancel</button>
 			</form>

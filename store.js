@@ -63,7 +63,7 @@ function generateTable (chStats){
 	row.append(col);
 	col = $('<div>').addClass('col').text(chStats.portrait);
 	row.append(col);
-	col=$('<div>').addClass('col').html('<button id="edit-data' + chArr.indexOf(chStats) +'">Edit</button><button id="delete-data'+chArr.indexOf(chStats)+'">delete</button>');
+	col=$('<div>').addClass('col').html('<button id="edit-data' + chArr.indexOf(chStats) +'">Edit</button><br><button id="delete-data'+chArr.indexOf(chStats)+'">Delete</button>');
 	row.append(col);
 
 	chart.append(row);
