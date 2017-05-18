@@ -42,7 +42,7 @@ h2{font-size: 2em;}
 
 h1, h2, p, .col {color: #000d31;}
 
-.hide{display: none;}
+.hide {display: none;}
 
 /*--------------------------------------------------------------------------------*/
 /*This area creates a label for the file upload and synchronizes it with the button events*/
@@ -175,7 +175,7 @@ input[type=number] {
 	margin: 0 0 0 0;
 }
 
-#add-cha{margin: 0 0 0 18%;}
+#add-cha{margin: 0 0 2% 18%;}
 #add-data{margin: 3% 0 0 7%;}
 
 /*--------------------------------------------------------------------------------*/

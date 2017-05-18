@@ -76,3 +76,23 @@ function generateTable (chStats){
 function deleteData() {
 	console.log("this button is working");
 }
+
+//-----------------------------------------------------------------------------//
+//This function creates a slide toggle with the buttons
+
+$(document).ready(function(){
+	$('#add-cha').click(function(){
+	  $('#database-layout').slideUp(170);
+		$('#character-form').slideDown(170);
+	});
+	$('#cancel-data').click(function(){
+		$('#database-layout').slideDown(170);
+		$('#character-form').slideUp(170);
+			event.preventDefault();
+	});
+	$('#add-data').click(function(){
+		$('#database-layout').slideDown(170);
+		$('#character-form').slideUp(170);
+			event.preventDefault();
+	});
+});
