@@ -12,10 +12,6 @@ var chArr= [];
 
 $('#add-data').on('click', getData);
 
-for(var i=0; i<chArr.length; ++i){
-$('#delete-data').on('click', deleteData);
-}
-
 //-----------------------------------------------------------------------------//
 //function gets new data and pushes to the array
 
